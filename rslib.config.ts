@@ -9,25 +9,18 @@ export default defineConfig({
   lib: [
     {
       bundle: false,
-      format: 'cjs',
-      dts: {
-        autoExtension: true,
-      },
-      output: {
-        distPath: {
-          root: 'dist/lib',
-        },
-      },
-    },
-    {
-      bundle: false,
       format: 'esm',
       dts: {
         autoExtension: true,
       },
       output: {
         distPath: {
-          root: 'dist/es',
+          root: 'dist',
+        },
+      },
+      redirect: {
+        dts: {
+          extension: true,
         },
       },
     },
